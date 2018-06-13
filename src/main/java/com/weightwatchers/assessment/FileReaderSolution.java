@@ -19,7 +19,7 @@ public class FileReaderSolution {
 		if(path == null || path.length() == 0)
 			throw new IllegalArgumentException("path cannot be null or empty");
 		File file = new File(".\\" + path);
-		if(file.exists())
+		if(file.exists() && file.isFile())
 			return true;
 		throw new FileNotFoundException("File not found at " + path);
 //		or return false depending on the specification
